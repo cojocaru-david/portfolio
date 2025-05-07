@@ -65,7 +65,7 @@
     "framer-motion": "^12.9.7",
     "fuse.js": "^7.1.0",
     "lodash.debounce": "^4.0.8",
-    "lucide-react": "^0.503.0",
+    "lucide-react": "^0.507.0",
     "patch-package": "^8.0.0",
     "react": "19.1.0",
     "react-dom": "19.1.0",
