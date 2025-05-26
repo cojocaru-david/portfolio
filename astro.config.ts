@@ -24,8 +24,6 @@ import vercel from '@astrojs/vercel';
 
 export default defineConfig({
   site: 'https://ingvictorcvgithub.io',
-
-  integrations: [
     expressiveCode({
       themes: ['catppuccin-latte', 'ayu-dark'],
       plugins: [pluginCollapsibleSections(), pluginLineNumbers()],
