@@ -23,7 +23,7 @@ import tailwindcss from '@tailwindcss/vite'
 import vercel from '@astrojs/vercel';
 
 export default defineConfig({
-  site: 'https://www.cojocarudavid.me',
+  site: 'https://ingvictorcvgithub.io',
 
   integrations: [
     expressiveCode({
