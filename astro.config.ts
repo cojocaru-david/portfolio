@@ -23,7 +23,7 @@ import tailwindcss from '@tailwindcss/vite'
 import vercel from '@astrojs/vercel';
 
 export default defineConfig({
-  site: 'https://ingvictorcvgithub.io',
+  site: 'https://ingvictorcv/ingvictorcv.github.io',
     expressiveCode({
       themes: ['catppuccin-latte', 'ayu-dark'],
       plugins: [pluginCollapsibleSections(), pluginLineNumbers()],
