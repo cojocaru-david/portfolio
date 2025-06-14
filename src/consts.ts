@@ -1,13 +1,13 @@
 import type { IconMap, SocialLink, Site } from '@/types'
 
 export const SITE: Site = {
-  title: 'Cojocaru David',
+  title: 'Pramuditha Nadun',
   description:
     "I'm a Junior Full Stack Developer with a passion for creating web applications. I have experience in both front-end and back-end development, and I'm always eager to learn new technologies and improve my skills. I enjoy collaborating with teams and contributing to projects that make a difference.",
   href: 'https://cojocarudavid.me',
-  author: 'Cojocaru David',
+  author: 'Pramuditha Nadun',
   locale: 'en-US',
-  location: 'Romania',
+  location: 'Sri Lanka',
 }
 
 export const NAV_LINKS: SocialLink[] = [
@@ -15,9 +15,17 @@ export const NAV_LINKS: SocialLink[] = [
     href: '/',
     label: 'home',
   },
+   {
+    href: '/experience',
+    label: 'experience',
+  },
   {
     href: '/projects',
     label: 'projects',
+  },
+   {
+    href: '/contact',
+    label: 'contact',
   },
   {
     href: '/blog',
@@ -27,7 +35,7 @@ export const NAV_LINKS: SocialLink[] = [
 
 export const SOCIAL_LINKS: SocialLink[] = [
   {
-    href: 'https://github.com/cojocaru-david?ref=personal-website',
+    href: 'https://github.com/PramudithaN',
     label: 'GitHub',
   },
   {
@@ -78,7 +86,6 @@ export const technologies: Technologies = {
     { text: 'HTML', logo: 'mdi:language-html5' },
     { text: 'JavaScript', logo: 'mdi:language-javascript' },
     { text: 'CSS', logo: 'mdi:language-css3' },
-    { text: 'PHP', logo: 'mdi:language-php' },
     { text: 'Astro', logo: 'simple-icons:astro' },
     { text: 'Tailwind CSS', logo: 'mdi:tailwind' },
   ],
@@ -87,26 +94,29 @@ export const technologies: Technologies = {
     { text: 'Git', logo: 'mdi:git' },
   ],
   'Hosting and Cloud Services': [
-    { text: 'DigitalOcean', logo: 'mdi:digital-ocean' },
-    { text: 'Cloudflare', logo: 'cib:cloudflare' },
-    { text: 'Netlify', logo: 'cib:netlify' },
+    {text:'Render', logo: 'cib:render'},
+    { text: 'Vercel', logo: 'cib:vercel' },
+    { text: 'GitHub Pages', logo: 'cib:github' },
   ],
   'Operating Systems': [
     { text: 'Windows', logo: 'mdi:windows' },
-    { text: 'Ubuntu', logo: 'mdi:ubuntu' },
+    { text: 'Linux', logo: 'mdi:linux'},
+    
   ],
   'Other Programming Languages and Technologies': [
-    { text: 'Lua', logo: 'mdi:language-lua' },
-    { text: 'Golang', logo: 'mdi:language-go' },
+    { text: 'React', logo: 'mdi:react' },
+    { text: 'TypeScript', logo: 'mdi:language-typescript' },
+    { text: 'Python', logo: 'mdi:language-python' },
+    { text: 'Java', logo: 'mdi:language-java' },
     { text: 'Node.js', logo: 'mdi:nodejs' },
   ],
   'Web Servers': [
-    { text: 'Apache', logo: 'cib:apache' },
-    { text: 'Nginx', logo: 'cib:nginx' },
+    // { text: 'Apache', logo: 'cib:apache' },
+    // { text: 'Nginx', logo: 'cib:nginx' },
   ],
   Databases: [
-    { text: 'MySQL', logo: 'cib:mysql' },
-    { text: 'MongoDB', logo: 'cib:mongodb' },
+    // { text: 'MySQL', logo: 'cib:mysql' },
+    // { text: 'MongoDB', logo: 'cib:mongodb' },
   ],
   'Other Software': [
     { text: 'Discord', logo: 'mdi:discord' },

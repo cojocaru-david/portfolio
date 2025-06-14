@@ -8,6 +8,7 @@ import Logo from '@/components/ui/logo'
 import Layout from '@/layouts/Layout.astro'
 import { getRecentPosts } from '@/lib/data-utils'
 import { SITE } from '@/consts'
+import { FaGithub } from 'react-icons/fa'
 
 const blog = await getRecentPosts(3)
 const currentUrl = Astro.url;
@@ -19,11 +20,11 @@ const currentUrl = Astro.url;
     <div
       class="flex flex-col items-center text-center sm:flex-row sm:items-start sm:gap-8 sm:text-left"
     >
-      <div class="relative overflow-hidden rounded-lg sm:shrink-0 sm:overflow-hidden sm:rounded-lg">
+      <!-- <div class="relative overflow-hidden rounded-lg sm:shrink-0 sm:overflow-hidden sm:rounded-lg">
         <Logo
           className="h-auto w-40 object-cover sm:w-48 md:w-56 lg:w-64 "
         />
-      </div>
+      </div> -->
       <div class="mt-8 sm:mt-0 sm:max-w-xl">
         <h1
           class="font-custom text-foreground text-start text-4xl font-extrabold sm:text-5xl"
@@ -38,23 +39,12 @@ const currentUrl = Astro.url;
           </span>
           <span class="flex items-center gap-1">
             <span class="text-foreground text-sm font-medium"> {SITE.location}</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 51.18 38.4"
+            <img
+              src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/lk.svg"
+              alt="Sri Lanka Flag"
               class="h-6 w-6 transition-transform duration-500 hover:rotate-12"
               aria-hidden="true"
-              role="img"
-              focusable="false"
-              aria-labelledby="title"
-            >
-              <path
-                d="M17.75 0v38.4H3.03C1.37 38.4 0 37.04 0 35.37V3.03C0 1.36 1.37 0 3.03 0h14.72z"
-                fill="#002b7f"></path>
-              <path fill="#fcd116" d="M37.45 0v38.4h-19.7V0h19.7z"></path>
-              <path
-                d="M37.45 38.4V0h14.72c1.67 0 3.03 1.36 3.03 3.03v32.33c0 1.67-1.37 3.03-3.03 3.03H37.45v.01z"
-                fill="#ce1126"></path>
-            </svg>
+            />
           </span>
         </div>
         <p class="text-md text-foreground mt-4 text-start font-sans" title="description" aria-label="description">
@@ -81,7 +71,246 @@ const currentUrl = Astro.url;
       </div>
     </section>
 
-    <section class="flex flex-col gap-y-4" aria-labelledby="latest-posts-title" role="region">
+    <section class="relative" aria-labelledby="experience-title">
+      <h2
+        id="experience-title"
+        class="font-custom text-foreground text-2xl font-bold"
+        title="experience"
+        aria-label="experience"
+        role="heading"
+      >
+        Experience
+      </h2>
+      <div class="mt-6 border-l-2 border-border pl-6 flex flex-col gap-10">
+        <!-- Experience 1 -->
+        <div class="relative">
+          <span class="absolute -left-8 top-2 h-4 w-4 rounded-full bg-primary border-2 border-background"></span>
+          <div class="flex flex-col sm:flex-row sm:items-center gap-2">
+            <span class="text-muted-foreground text-sm font-mono w-32 shrink-0">2024 - Present</span>
+            <div>
+              <h3 class="text-lg font-semibold text-foreground">
+                Junior Web Developer <span class="text-primary">@ Tech Startup</span>
+                <a href="#" class="ml-1 i-lucide-arrow-up-right text-xs text-primary" aria-label="Company Link"></a>
+              </h3>
+              <div class="text-muted-foreground text-xs mb-1">Auckland, New Zealand – On site</div>
+              <div class="mb-2">
+                <span class="font-bold">Summary:</span>
+                <ul class="list-disc ml-5 text-sm">
+                  <li>Developing and maintaining web applications using JavaScript, HTML, and CSS. Collaborating with the team to implement new features and fix bugs.</li>
+                </ul>
+              </div>
+              <div class="mb-2">
+                <span class="font-bold">Responsibilities:</span>
+                <ul class="list-disc ml-5 text-sm">
+                  <li>Collaborated with senior developers to design and implement web applications using modern JavaScript frameworks.</li>
+                  <li>Assisted in debugging and optimizing front-end code to ensure smooth user experiences.</li>
+                  <li>Participated in code reviews and contributed to improving coding standards within the team.</li>
+                </ul>
+              </div>
+              <div class="mb-2">
+                <span class="font-bold">Achievements:</span>
+                <ul class="list-disc ml-5 text-sm">
+                  <li>Developing and maintaining web applications using JavaScript, HTML, and CSS. Collaborating with the team to implement new features and fix bugs.</li>
+                </ul>
+              </div>
+              <div class="flex gap-2 mt-2">
+                <span class="bg-orange-900/40 text-orange-200 rounded px-2 py-0.5 text-xs flex items-center gap-1"><span class="i-devicon-react"></span> React</span>
+                <span class="bg-pink-900/40 text-pink-200 rounded px-2 py-0.5 text-xs flex items-center gap-1">Tailwind</span>
+                <span class="bg-yellow-900/40 text-yellow-200 rounded px-2 py-0.5 text-xs flex items-center gap-1"><span class="i-devicon-github"></span> GitHub</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Experience 2 -->
+        <div class="relative">
+          <span class="absolute -left-8 top-2 h-4 w-4 rounded-full bg-primary border-2 border-background"></span>
+          <div class="flex flex-col sm:flex-row sm:items-center gap-2">
+            <span class="text-muted-foreground text-sm font-mono w-32 shrink-0">2022 - 2023</span>
+            <div>
+              <h3 class="text-lg font-semibold text-foreground">
+                Junior Software Developer <span class="text-primary">@ Innovative Solutions</span>
+                <a href="#" class="ml-1 i-lucide-arrow-up-right text-xs text-primary" aria-label="Company Link"></a>
+              </h3>
+              <div class="text-muted-foreground text-xs mb-1">Wellington, New Zealand – Hybrid</div>
+              <div class="mb-2">
+                <span class="font-bold">Summary:</span>
+                <ul class="list-disc ml-5 text-sm">
+                  <li>Assisting in the development and maintenance of software applications using Python and Django. Collaborating with cross-functional teams to ensure quality and timely delivery of software solutions.</li>
+                </ul>
+              </div>
+              <div class="mb-2">
+                <span class="font-bold">Responsibilities:</span>
+                <ul class="list-disc ml-5 text-sm">
+                  <li>Developed and maintained backend services using Python and Django.</li>
+                  <li>Worked closely with front-end developers to integrate user-facing elements with server-side logic.</li>
+                  <li>Participated in daily stand-ups and bi-weekly sprint planning meetings to ensure alignment with project goals.</li>
+                </ul>
+              </div>
+              <div class="mb-2">
+                <span class="font-bold">Achievements:</span>
+                <ul class="list-disc ml-5 text-sm">
+                  <li>Successfully delivered multiple features on time and improved backend performance by optimizing database queries.</li>
+                </ul>
+              </div>
+              <div class="flex gap-2 mt-2">
+                <span class="bg-blue-900/40 text-blue-200 rounded px-2 py-0.5 text-xs flex items-center gap-1"><span class="i-devicon-python"></span> Python</span>
+                <span class="bg-green-900/40 text-green-200 rounded px-2 py-0.5 text-xs flex items-center gap-1"><span class="i-devicon-django"></span> Django</span>
+                <span class="bg-gray-900/40 text-gray-200 rounded px-2 py-0.5 text-xs flex items-center gap-1"><span class="i-devicon-git"></span> Git</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- Project Card: CV Matching System -->
+      <div class="flex-1 bg-card border border-border rounded-xl p-6 shadow-lg relative">
+      <h3 class="flex items-center gap-2 text-lg font-semibold text-foreground mb-2">
+        <span class="i-lucide-folder-open text-primary" aria-hidden="true"></span>
+        CV Matching System
+        <a href="https://github.com/yourusername/cv-matching-system" target="_blank" rel="noopener noreferrer" class="ml-1 i-lucide-github text-lg text-primary" aria-label="GitHub Repo">
+          <FaGithub />
+        </a>
+      </h3>
+      <p class="text-muted-foreground text-sm mb-4">
+        A proprietary code AI-driven CV matching system to connect the offer and the best candidates. Automates the recruitment process.
+      </p>
+      <ul class="mb-4 space-y-1 text-sm">
+        <li class="flex items-center gap-2">
+        <span class="i-lucide-target text-pink-400"></span>
+        <span class="bg-pink-900/40 text-pink-200 rounded px-2 py-0.5">Tailored job opportunities</span>
+        </li>
+        <li class="flex items-center gap-2">
+        <span class="i-lucide-sparkles text-yellow-400"></span>
+        <span>AI-driven complex workflows</span>
+        </li>
+        <li class="flex items-center gap-2">
+        <span class="i-lucide-rocket text-purple-400"></span>
+        <span>80% increase in productivity</span>
+        </li>
+      </ul>
+      <div class="flex flex-wrap gap-2 mt-2">
+        <span class="bg-muted px-2 py-0.5 rounded text-xs flex items-center gap-1"><span class="i-devicon-python"></span> Python</span>
+        <span class="bg-muted px-2 py-0.5 rounded text-xs flex items-center gap-1"><span class="i-devicon-redis"></span> Redis</span>
+        <span class="bg-muted px-2 py-0.5 rounded text-xs flex items-center gap-1"><span class="i-devicon-firebase"></span> Firebase</span>
+        <span class="bg-muted px-2 py-0.5 rounded text-xs flex items-center gap-1"><span class="i-devicon-googlecloud"></span> Google Cloud</span>
+        <span class="bg-muted px-2 py-0.5 rounded text-xs flex items-center gap-1">Claude</span>
+        <span class="bg-muted px-2 py-0.5 rounded text-xs flex items-center gap-1">Groq</span>
+      </div>
+      </div>
+
+      <!-- Project Card: TODO List -->
+      <div class="flex-1 bg-card border border-border rounded-xl p-6 shadow-lg relative">
+      <h3 class="flex items-center gap-2 text-lg font-semibold text-foreground mb-2">
+        <span class="i-lucide-folder-open text-primary" aria-hidden="true"></span>
+        TODO List
+        <a href="https://github.com/yourusername/cv-matching-system" target="_blank" rel="noopener noreferrer" class="ml-1 i-lucide-github text-lg text-primary" aria-label="GitHub Repo">
+          <FaGithub />
+        </a>
+      </h3>
+      <p class="text-muted-foreground text-sm mb-4">
+        A simple app to showcase my skills in Angular. It's a TODO list with a beautiful and smooth UI, good user experience and best practices. Not finished yet.
+      </p>
+      <ul class="mb-4 space-y-1 text-sm">
+        <li class="flex items-center gap-2">
+        <span class="i-lucide-hourglass text-orange-400"></span>
+        <span>In progress</span>
+        </li>
+        <li class="flex items-center gap-2">
+        <span class="i-lucide-layers text-blue-400"></span>
+        <span>Made-from-scratch complex components</span>
+        </li>
+        <li class="flex items-center gap-2">
+        <span class="i-lucide-smile text-yellow-400"></span>
+        <span>Beautiful and smooth UI, good user experience</span>
+        </li>
+        <li class="flex items-center gap-2">
+        <span class="i-lucide-server text-purple-400"></span>
+        <span>Server Side Rendering</span>
+        </li>
+      </ul>
+      <div class="flex flex-wrap gap-2 mt-2">
+        <span class="bg-muted px-2 py-0.5 rounded text-xs flex items-center gap-1"><span class="i-devicon-angular"></span> Angular</span>
+        <span class="bg-muted px-2 py-0.5 rounded text-xs flex items-center gap-1">RxJS</span>
+        <span class="bg-muted px-2 py-0.5 rounded text-xs flex items-center gap-1">TypeScript</span>
+        <span class="bg-muted px-2 py-0.5 rounded text-xs flex items-center gap-1">SCSS</span>
+        <span class="bg-muted px-2 py-0.5 rounded text-xs flex items-center gap-1">NodeJS</span>
+        <span class="bg-muted px-2 py-0.5 rounded text-xs flex items-center gap-1"><span class="i-devicon-firebase"></span> Firebase</span>
+      </div>
+      </div>
+      
+      <!-- Project Card: Portfolio Website -->
+      <div class="flex-1 bg-card border border-border rounded-xl p-6 shadow-lg relative">
+      <h3 class="flex items-center gap-2 text-lg font-semibold text-foreground mb-2">
+        <span class="i-lucide-folder-open text-primary" aria-hidden="true"></span>
+        Portfolio Website
+        <a href="https://github.com/yourusername/cv-matching-system" target="_blank" rel="noopener noreferrer" class="ml-1 i-lucide-github text-lg text-primary" aria-label="GitHub Repo">
+          <FaGithub />
+        </a>
+      </h3>
+      <p class="text-muted-foreground text-sm mb-4">
+        My personal portfolio website built with Astro and React. Showcases my projects, skills, and blog posts with a modern, responsive design.
+      </p>
+      <ul class="mb-4 space-y-1 text-sm">
+        <li class="flex items-center gap-2">
+        <span class="i-lucide-layout-dashboard text-blue-400"></span>
+        <span>Fully responsive and accessible</span>
+        </li>
+        <li class="flex items-center gap-2">
+        <span class="i-lucide-code text-green-400"></span>
+        <span>Astro Islands architecture</span>
+        </li>
+        <li class="flex items-center gap-2">
+        <span class="i-lucide-sparkles text-yellow-400"></span>
+        <span>Animated UI and dark mode</span>
+        </li>
+      </ul>
+      <div class="flex flex-wrap gap-2 mt-2">
+        <span class="bg-muted px-2 py-0.5 rounded text-xs flex items-center gap-1"><span class="i-devicon-astro"></span> Astro</span>
+        <span class="bg-muted px-2 py-0.5 rounded text-xs flex items-center gap-1"><span class="i-devicon-react"></span> React</span>
+        <span class="bg-muted px-2 py-0.5 rounded text-xs flex items-center gap-1">TypeScript</span>
+        <span class="bg-muted px-2 py-0.5 rounded text-xs flex items-center gap-1">TailwindCSS</span>
+        <span class="bg-muted px-2 py-0.5 rounded text-xs flex items-center gap-1">Vercel</span>
+      </div>
+      </div>
+
+      <!-- Project Card: Weather Dashboard -->
+      <div class="flex-1 bg-card border border-border rounded-xl p-6 shadow-lg relative">
+      <h3 class="flex items-center gap-2 text-lg font-semibold text-foreground mb-2">
+        <span class="i-lucide-folder-open text-primary" aria-hidden="true"></span>
+        Weather Dashboard
+       <a href="https://github.com/yourusername/cv-matching-system" target="_blank" rel="noopener noreferrer" class="ml-1 i-lucide-github text-lg text-primary" aria-label="GitHub Repo">
+          <FaGithub />
+        </a>
+      </h3>
+      <p class="text-muted-foreground text-sm mb-4">
+        A real-time weather dashboard that fetches and displays weather data for any city. Features interactive charts and location search.
+      </p>
+      <ul class="mb-4 space-y-1 text-sm">
+        <li class="flex items-center gap-2">
+        <span class="i-lucide-map-pin text-red-400"></span>
+        <span>Location-based weather search</span>
+        </li>
+        <li class="flex items-center gap-2">
+        <span class="i-lucide-bar-chart-3 text-blue-400"></span>
+        <span>Interactive weather charts</span>
+        </li>
+        <li class="flex items-center gap-2">
+        <span class="i-lucide-refresh-cw text-green-400"></span>
+        <span>Live data updates</span>
+        </li>
+      </ul>
+      <div class="flex flex-wrap gap-2 mt-2">
+        <span class="bg-muted px-2 py-0.5 rounded text-xs flex items-center gap-1"><span class="i-devicon-javascript"></span> JavaScript</span>
+        <span class="bg-muted px-2 py-0.5 rounded text-xs flex items-center gap-1"><span class="i-devicon-react"></span> React</span>
+        <span class="bg-muted px-2 py-0.5 rounded text-xs flex items-center gap-1">Chart.js</span>
+        <span class="bg-muted px-2 py-0.5 rounded text-xs flex items-center gap-1">OpenWeather API</span>
+        <span class="bg-muted px-2 py-0.5 rounded text-xs flex items-center gap-1">CSS Modules</span>
+      </div>
+      </div>
+    </section>
+    <!-- <section class="flex flex-col gap-y-4" aria-labelledby="latest-posts-title" role="region">
       <div class="relative" aria-labelledby="latest-posts-title">
         <h2
           id="latest-posts-title"
@@ -116,6 +345,6 @@ const currentUrl = Astro.url;
           >
         </Link>
       </div>
-    </section>
+    </section> -->
   </section>
 </Layout>
