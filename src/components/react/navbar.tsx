@@ -80,25 +80,6 @@ const Navbar = () => {
     4: { width: '50%' },
   }
 
-  const menuVariants = {
-    closed: {
-      opacity: 0,
-      y: "-100%",
-      transition: {
-        duration: 0.5,
-        ease: [0.22, 1, 0.36, 1],
-      }
-    },
-    open: {
-      opacity: 1,
-      y: "0%",
-      transition: {
-        duration: 0.5,
-        ease: [0.22, 1, 0.36, 1],
-      }
-    }
-  }
-
   return (
     <>
       <motion.header
@@ -201,7 +182,6 @@ const Navbar = () => {
             initial="closed"
             animate="open"
             exit="closed"
-            variants={menuVariants}
             className="fixed inset-0 z-20 flex flex-col items-center justify-start bg-background border-0 shadow-none"
           >
             <div className="flex flex-col items-center justify-start h-full pt-24 w-full p-6">

@@ -11,19 +11,29 @@ import Favicons from './Favicons.astro'
     content="width=device-width, initial-scale=1.0, user-scalable=yes"
   />
   <meta name="generator" content={Astro.generator} />
-  <meta name="robots" content="index, follow" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
   <meta name="googlebot" content="index, follow" />
   <meta name="google" content="notranslate" />
   <meta name="revisit-after" content="1 days" />
 
+  <!-- SEO Enhancement Tags -->
+  <meta name="author" content={SITE.author} />
+  <meta name="publisher" content={SITE.title} />
+  <meta name="language" content={SITE.locale} />
+  <meta name="geo.region" content="RO" />
+  <meta name="geo.placename" content={SITE.location} />
+
+  <!-- Mobile and PWA Tags -->
   <meta name="mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content={SITE.title} />
   <meta
     name="format-detection"
     content="telephone=no,date=no,address=no,email=no,url=no"
   />
 
+  <!-- Theme Colors -->
   <meta
     name="theme-color"
     content="#121212"
@@ -31,16 +41,22 @@ import Favicons from './Favicons.astro'
   />
   <meta
     name="theme-color"
-    content="#121212"
+    content="#ffffff"
     media="(prefers-color-scheme: light)"
   />
+  <meta name="msapplication-TileColor" content="#121212" />
 
+  <!-- Prefetch and Preconnect for Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+  <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+
+  <!-- Sitemap and Feed Links -->
   <link rel="sitemap" href="/sitemap-index.xml" />
   <link rel="manifest" href="/site.webmanifest" />
   <link
     rel="alternate"
     type="application/rss+xml"
-    title={SITE.title}
+    title={`${SITE.title} RSS Feed`}
     href={new URL('rss.xml', Astro.site)}
   />
 

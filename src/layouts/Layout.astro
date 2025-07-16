@@ -10,8 +10,7 @@ import { cn } from '@/lib/utils'
 import Posthog from '@/components/Posthog.astro'
 
 const {
-  isWide = false,
-  canonicalUrl = SITE.href
+  isWide = false
 } = Astro.props
 ---
 
@@ -19,8 +18,16 @@ const {
 <html lang={SITE.locale}>
   <Head>
     <slot name="head" />
-    <script src="https://analytics.ahrefs.com/analytics.js" data-key="+FHMgRP7/Duxaq5D0gZtJw" async></script>
+    <script is:inline src="https://analytics.ahrefs.com/analytics.js" data-key="+FHMgRP7/Duxaq5D0gZtJw" async></script>
     <link rel="sitemap" href="/sitemap.xml" />
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="/fonts/GeistVF.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/GeistMonoVF.woff2" as="font" type="font/woff2" crossorigin />
+    
+    <!-- DNS prefetch for external resources -->
+    <link rel="dns-prefetch" href="//analytics.ahrefs.com" />
+    
     <script is:inline data-astro-rerun>
       (function() {
         try {
@@ -43,7 +50,6 @@ const {
         }
       })();
     </script>
-    <link rel="canonical" href={canonicalUrl} />
     <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/rss.xml" />
     <Posthog />
   </Head>

@@ -8,6 +8,7 @@ import {
   BreadcrumbSeparator,
 } from '@/components/ui/breadcrumb'
 import { Icon } from 'astro-icon/components'
+import { SITE } from '@/consts'
 
 export interface BreadcrumbItem {
   href?: string
@@ -20,7 +21,29 @@ interface Props {
 }
 
 const { items } = Astro.props
+
+const breadcrumbStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": SITE.href
+    },
+    ...items.map((item, index) => ({
+      "@type": "ListItem",
+      "position": index + 2,
+      "name": item.label,
+      ...(item.href && { "item": new URL(item.href, SITE.href).toString() })
+    }))
+  ]
+}
 ---
+
+<!-- Breadcrumb Structured Data -->
+<script type="application/ld+json" is:inline set:html={JSON.stringify(breadcrumbStructuredData)} />
 
 <Breadcrumb>
   <BreadcrumbList>

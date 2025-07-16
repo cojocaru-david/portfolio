@@ -10,36 +10,56 @@ const { post } = Astro.props
 
 const title = post.data.title || SITE.title
 const description = post.data.description || SITE.description
-const postUrl = new URL(post.id, SITE.href).toString()
-const image = SITE.href + '/image/' + post.id + '.png';
+const postUrl = new URL(`/blog/${post.id}/`, SITE.href).toString()
+const image = new URL(`/image/${post.id}.png`, SITE.href).toString()
 const author = post.data.authors ? post.data.authors.join(', ') : SITE.author
+
+const optimizedDescription = description.length > 160 
+  ? description.substring(0, 157) + '...' 
+  : description
+
+const seoTitle = `${title} - ${SITE.title}`
+const postUrlWithoutTrailingSlash = postUrl.endsWith('/') ? postUrl.slice(0, -1) : postUrl
+const postCanonicalUrl = new URL(postUrlWithoutTrailingSlash, SITE.href).toString()
 ---
 
-<title>{`${title} - ${SITE.title}`}</title>
-<meta name="description" content={description} />
+<title>{seoTitle}</title>
+<meta name="description" content={optimizedDescription} />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="robots" content="index, follow" />
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
 <meta name="author" content={author} />
+<meta name="publisher" content={SITE.title} />
+<meta name="language" content={SITE.locale} />
+<link rel="canonical" href={postCanonicalUrl} />
 {post?.data.tags && <meta name="keywords" content={post.data.tags.join(', ')} />}
+
+<!-- Open Graph Meta Tags -->
 <meta property="og:title" content={title} />
-<meta property="og:description" content={description} />
+<meta property="og:description" content={optimizedDescription} />
 <meta property="og:image" content={image} />
 <meta property="og:image:alt" content={title} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
 <meta property="og:type" content="article" />
 <meta property="og:locale" content={SITE.locale} />
 <meta property="og:site_name" content={SITE.title} />
 <meta property="og:url" content={postUrl} />
 <meta property="og:author" content={author} />
+
+<!-- Article specific Open Graph -->
 <meta property="article:published_time" content={post.data.date.toISOString()} />
-<meta property="article:modified_time" content={post.data.date.toISOString()} />
-<meta property="article:published" content={post.data.date.toISOString()} />
+<meta property="article:author" content={author} />
 <meta property="article:publisher" content={SITE.title} />
-<meta name="twitter:title" content={title} />
-<meta name="twitter:description" content={description} />
-<meta property="twitter:image" content={image} />
-<meta name="twitter:image:alt" content={title} />
+<meta property="article:section" content="Technology" />
+
+<!-- Twitter Card Meta Tags -->
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:creator" content={author} />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={optimizedDescription} />
+<meta name="twitter:image" content={image} />
+<meta name="twitter:image:alt" content={title} />
+<meta name="twitter:creator" content={`@${SITE.author.replace(' ', '').toLowerCase()}`} />
+<meta name="twitter:site" content={`@${SITE.author.replace(' ', '').toLowerCase()}`} />
 
 {
   post?.data.tags &&
@@ -48,22 +68,32 @@ const author = post.data.authors ? post.data.authors.join(', ') : SITE.author
     })
 }
 
+<!-- Enhanced JSON-LD Structured Data -->
 <script type="application/ld+json" is:inline set:html={JSON.stringify({
   "@context": "https://schema.org",
   "@type": "BlogPosting",
   "headline": title,
-  "description": description,
-  "image": image,
+  "description": optimizedDescription,
+  "image": {
+    "@type": "ImageObject",
+    "url": image,
+    "width": 1200,
+    "height": 630
+  },
   "author": {
     "@type": "Person",
-    "name": author
+    "name": author,
+    "url": SITE.href
   },
   "publisher": {
     "@type": "Organization",
     "name": SITE.title,
+    "url": SITE.href,
     "logo": {
       "@type": "ImageObject",
-      "url": new URL("/favicon.ico", SITE.href).toString()
+      "url": new URL("/favicon.ico", SITE.href).toString(),
+      "width": 32,
+      "height": 32
     }
   },
   "datePublished": post.data.date.toISOString(),
@@ -73,5 +103,15 @@ const author = post.data.authors ? post.data.authors.join(', ') : SITE.author
     "@id": postUrl
   },
   "keywords": post?.data.tags ? post.data.tags.join(', ') : '',
-  "url": postUrl
+  "url": postUrl,
+  "inLanguage": SITE.locale,
+  "isPartOf": {
+    "@type": "Blog",
+    "@id": new URL("/blog/", SITE.href).toString(),
+    "name": `${SITE.title} Blog`
+  },
+  "about": post?.data.tags ? post.data.tags.map(tag => ({
+    "@type": "Thing",
+    "name": tag
+  })) : []
 })} />

@@ -41,10 +41,10 @@ const structuredData = {
   keywords: post.data.tags ? post.data.tags.join(', ') : '',
   description: post.data.description || '',
 }
-const currentUrl = Astro.url;
+const canonicalUrl = new URL(`/blog/${post.id}/`, Astro.site).toString();
 ---
 
-<Layout canonicalUrl={currentUrl} isWide={true}>
+<Layout canonicalUrl={canonicalUrl} isWide={true}>
   <PostHead slot="head" post={post} />
   
   <script
