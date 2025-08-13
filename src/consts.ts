@@ -4,7 +4,7 @@ export const SITE: Site = {
   title: 'Cojocaru David',
   description:
     "Junior Full Stack Developer specializing in modern web technologies. Expert in React, Node.js, TypeScript, and cloud development. Read my latest tech tutorials, project insights, and programming tips on web development, DevOps, and software engineering best practices.",
-  href: 'https://cojocarudavid.me',
+  href: 'https://www.cojocarudavid.me',
   author: 'Cojocaru David',
   locale: 'en-US',
   location: 'Romania',
