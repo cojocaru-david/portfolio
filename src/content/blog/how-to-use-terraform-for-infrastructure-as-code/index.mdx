@@ -15,7 +15,7 @@ updatedDate: 2025-05-02
 
 # How to Use Terraform for Infrastructure as Code: A Step-by-Step Guide  
 
-Terraform is the leading Infrastructure as Code (IaC) tool for automating and managing cloud infrastructure across AWS, Azure, Google Cloud, and more. In this guide, you’ll learn **how to use Terraform for Infrastructure as Code**—from installation to writing configurations, executing workflows, and following best practices. Whether you're a DevOps engineer or a cloud professional, this step-by-step tutorial will help you deploy and scale infrastructure efficiently.  
+Terraform is the leading Infrastructure as Code (IaC) tool for automating and managing cloud infrastructure across AWS, Azure, Google Cloud, and more. In this guide, you'll learn **how to use Terraform for Infrastructure as Code** from installation to writing configurations, executing workflows, and following best practices. Whether you're a DevOps engineer or a cloud professional, this step-by-step tutorial will help you deploy and scale infrastructure efficiently.  
 
 ## What Is Terraform and Why Use It?  
 
@@ -24,18 +24,18 @@ Terraform, developed by HashiCorp, is an open-source IaC tool that lets you defi
 ### Key Benefits of Terraform  
 
 - **Multi-Cloud Support:** Manage AWS, Azure, GCP, and hybrid environments in one workflow.  
-- **Declarative Syntax:** Define *what* your infrastructure should look like—Terraform handles the *how*.  
+- **Declarative Syntax:** Define *what* your infrastructure should look like Terraform handles the *how*.  
 - **State Management:** Track infrastructure changes to prevent configuration drift.  
 - **Modularity:** Reuse code across projects with Terraform modules.  
 
-> _"Terraform turns infrastructure into software, making deployments predictable and scalable."_ – DevOps Engineer  
+> _"Terraform turns infrastructure into software, making deployments predictable and scalable."_ - DevOps Engineer  
 
 ## How to Install and Set Up Terraform  
 
 Before writing configurations, follow these steps to install Terraform:  
 
-1. **Download Terraform:** Get the latest version from [HashiCorp’s website](https://www.terraform.io/downloads).  
-2. **Install the CLI:** Add Terraform to your system’s `PATH` for global command access.  
+1. **Download Terraform:** Get the latest version from [HashiCorp's website](https://www.terraform.io/downloads).  
+2. **Install the CLI:** Add Terraform to your system's `PATH` for global command access.  
 3. **Configure Cloud Credentials:** Set up authentication (e.g., AWS IAM roles, Azure Service Principals).  
 
 Verify your installation by running:  
@@ -46,7 +46,7 @@ terraform --version
 
 ## Writing Your First Terraform Configuration  
 
-A Terraform file (`.tf`) defines resources like servers, networks, and databases. Here’s a basic example for an AWS EC2 instance:  
+A Terraform file (`.tf`) defines resources like servers, networks, and databases. Here's a basic example for an AWS EC2 instance:  
 
 ```hcl  
 provider "aws" {  
@@ -70,7 +70,7 @@ resource "aws_instance" "web_server" {
 
 ## The Terraform Workflow: Plan, Apply, Destroy  
 
-Terraform’s core workflow ensures safe and controlled deployments:  
+Terraform's core workflow ensures safe and controlled deployments:  
 
 1. **`terraform init`:** Downloads provider plugins and sets up the backend.  
 2. **`terraform plan`:** Shows what changes will be made (preview before applying).  

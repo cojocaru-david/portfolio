@@ -37,7 +37,7 @@ CREATE INDEX idx_user_search ON users(last_name, first_name);
 
 ## 2. Refine WHERE Clauses for Efficiency  
 
-The `WHERE` clause dictates query speed—optimize it ruthlessly.  
+The `WHERE` clause dictates query speed optimize it ruthlessly.  
 
 ### Place Restrictive Conditions First  
 Order conditions from most to least selective to reduce the dataset early.  
@@ -93,7 +93,7 @@ Execution plans reveal how your database processes queries.
 Use `EXPLAIN` (PostgreSQL/MySQL) or `EXPLAIN PLAN` (Oracle) to spot inefficiencies.  
 
 ### Watch for Full Table Scans  
-These indicate missing indexes—address them immediately.  
+These indicate missing indexes address them immediately.  
 
 ## 7. Replace Cursors with Set-Based Logic  
 
@@ -143,6 +143,6 @@ As query patterns change, refine indexes to match new needs.
 ### Schedule Maintenance  
 Regularly run `ANALYZE` (PostgreSQL) or `UPDATE STATISTICS` (SQL Server) to keep performance sharp.  
 
-> _"The first rule of optimization: Don’t do it. The second rule: Don’t do it yet."_ — Michael A. Jackson  
+> _"The first rule of optimization: Don't do it. The second rule: Don't do it yet."_   Michael A. Jackson  
 
 #SQL #DatabaseOptimization #QueryPerformance #TechTips #Developer

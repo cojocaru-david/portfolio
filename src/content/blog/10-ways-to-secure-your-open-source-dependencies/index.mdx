@@ -18,7 +18,7 @@ updatedDate: 2025-05-02
 
 # 10 Proven Ways to Secure Your Open-Source Dependencies  
 
-Open-source dependencies power modern software, but they also introduce security risks. If you’re wondering how to protect your project from vulnerabilities, this guide covers **10 actionable strategies** to secure your dependencies effectively. From automated scanning to minimizing bloat, these best practices will help you build safer, more resilient applications.  
+Open-source dependencies power modern software, but they also introduce security risks. If you're wondering how to protect your project from vulnerabilities, this guide covers **10 actionable strategies** to secure your dependencies effectively. From automated scanning to minimizing bloat, these best practices will help you build safer, more resilient applications.  
 
 ## 1. Conduct Regular Dependency Audits  
 
@@ -26,7 +26,7 @@ Auditing dependencies is like a health check for your project. It uncovers outda
 
 ### Key Actions:  
 - **Automate scans** with tools like `npm audit` (Node.js) or `safety check` (Python) to detect known vulnerabilities.  
-- **Review licenses** to avoid legal pitfalls—some restrict how you can use the software.  
+- **Review licenses** to avoid legal pitfalls some restrict how you can use the software.  
 - **Manually inspect critical dependencies** to assess their security posture and functionality.  
 
 ## 2. Use Dependency Lock Files  
@@ -35,7 +35,7 @@ Lock files ensure consistency by "pinning" exact dependency versions across envi
 
 ### Key Actions:  
 - **Commit lock files** (e.g., `package-lock.json`, `yarn.lock`) to version control for reproducibility.  
-- **Avoid floating versions** (e.g., `^1.0.0`)—update dependencies intentionally and test thoroughly.  
+- **Avoid floating versions** (e.g., `^1.0.0`) update dependencies intentionally and test thoroughly.  
 
 ## 3. Integrate Vulnerability Scanning into CI/CD  
 
@@ -51,7 +51,7 @@ Outdated packages are prime targets for exploits.
 
 ### Key Actions:  
 - **Check for updates** with commands like `npm outdated` or `composer outdated`.  
-- **Patch high-severity vulnerabilities first**—don’t let them linger.  
+- **Patch high-severity vulnerabilities first** don't let them linger.  
 
 ## 5. Reduce Dependency Bloat  
 

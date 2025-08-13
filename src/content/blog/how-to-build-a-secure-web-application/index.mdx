@@ -21,11 +21,11 @@ Building a secure web application starts with understanding key threats and impl
 
 A single security breach can lead to data leaks, financial losses, and reputational damage. Prioritizing security safeguards sensitive information while building user confidence. Common threats include:  
 
-- **SQL Injection (SQLi)** – Malicious code injected into database queries.  
-- **Cross-Site Scripting (XSS)** – Attackers inject scripts to steal data or hijack sessions.  
-- **Cross-Site Request Forgery (CSRF)** – Users tricked into performing unauthorized actions.  
-- **Broken Authentication** – Weak login systems allowing unauthorized access.  
-- **Security Misconfigurations** – Poorly set up servers or frameworks exposing vulnerabilities.  
+- **SQL Injection (SQLi)** - Malicious code injected into database queries.  
+- **Cross-Site Scripting (XSS)** - Attackers inject scripts to steal data or hijack sessions.  
+- **Cross-Site Request Forgery (CSRF)** - Users tricked into performing unauthorized actions.  
+- **Broken Authentication** - Weak login systems allowing unauthorized access.  
+- **Security Misconfigurations** - Poorly set up servers or frameworks exposing vulnerabilities.  
 
 Proactively addressing these risks minimizes exposure to cyberattacks.  
 
@@ -35,58 +35,58 @@ Proactively addressing these risks minimizes exposure to cyberattacks.
 
 Weak logins are a top attack vector. Protect access with:  
 
-- **Multi-Factor Authentication (MFA)** – Require a second verification step (SMS, authenticator apps).  
-- **OAuth 2.0 & OpenID Connect** – Enable secure third-party logins (Google, Facebook).  
-- **Password Hashing** – Use **bcrypt** or **Argon2** to store passwords securely.  
+- **Multi-Factor Authentication (MFA)** - Require a second verification step (SMS, authenticator apps).  
+- **OAuth 2.0 & OpenID Connect** - Enable secure third-party logins (Google, Facebook).  
+- **Password Hashing** - Use **bcrypt** or **Argon2** to store passwords securely.  
 
 ### 2. Validate & Sanitize All Input  
 
 Assume all user input is malicious. Mitigate risks by:  
 
-- **Server-Side Validation** – Check data formats, lengths, and types before processing.  
-- **Output Encoding** – Prevent XSS by escaping harmful characters in displayed content.  
-- **Parameterized Queries** – Stop SQLi by separating code from user input.  
+- **Server-Side Validation** - Check data formats, lengths, and types before processing.  
+- **Output Encoding** - Prevent XSS by escaping harmful characters in displayed content.  
+- **Parameterized Queries** - Stop SQLi by separating code from user input.  
 
 ### 3. Encrypt Data in Transit  
 
 Unencrypted traffic is vulnerable to interception. Secure data with:  
 
-- **HTTPS (TLS/SSL)** – Encrypt all client-server communication.  
-- **HSTS** – Force browsers to use HTTPS only.  
-- **Secure Cookies** – Set `HttpOnly` and `Secure` flags to block unauthorized access.  
+- **HTTPS (TLS/SSL)** - Encrypt all client-server communication.  
+- **HSTS** - Force browsers to use HTTPS only.  
+- **Secure Cookies** - Set `HttpOnly` and `Secure` flags to block unauthorized access.  
 
 ### 4. Defend Against CSRF Attacks  
 
 Prevent unauthorized actions by:  
 
-- **Anti-CSRF Tokens** – Embed unique tokens in forms and verify them server-side.  
-- **SameSite Cookies** – Restrict cookie sharing across sites.  
-- **Header Validation** – Check `Origin` and `Referer` headers for legitimacy.  
+- **Anti-CSRF Tokens** - Embed unique tokens in forms and verify them server-side.  
+- **SameSite Cookies** - Restrict cookie sharing across sites.  
+- **Header Validation** - Check `Origin` and `Referer` headers for legitimacy.  
 
 ### 5. Update Dependencies Regularly  
 
 Outdated libraries expose apps to known exploits. Stay secure by:  
 
-- **Automated Tools** – Use **Dependabot** or **Renovate** to track updates.  
-- **CVE Monitoring** – Subscribe to vulnerability alerts for your tech stack.  
+- **Automated Tools** - Use **Dependabot** or **Renovate** to track updates.  
+- **CVE Monitoring** - Subscribe to vulnerability alerts for your tech stack.  
 
 ## Testing & Monitoring for Ongoing Security  
 
 ### 1. Conduct Security Audits  
 
-- **SAST** – Scan code for vulnerabilities like SQLi or XSS.  
-- **DAST** – Test running apps for flaws (e.g., broken authentication).  
+- **SAST** - Scan code for vulnerabilities like SQLi or XSS.  
+- **DAST** - Test running apps for flaws (e.g., broken authentication).  
 
 ### 2. Perform Penetration Testing  
 
-- **Ethical Hacking** – Hire experts to simulate real-world attacks.  
-- **OWASP Top 10** – Focus testing on critical risks like injection flaws.  
+- **Ethical Hacking** - Hire experts to simulate real-world attacks.  
+- **OWASP Top 10** - Focus testing on critical risks like injection flaws.  
 
 ### 3. Monitor for Threats  
 
-- **Log Analysis** – Track anomalies with tools like **Splunk** or **ELK Stack**.  
-- **Intrusion Detection (IDS)** – Detect and respond to attacks in real time.  
+- **Log Analysis** - Track anomalies with tools like **Splunk** or **ELK Stack**.  
+- **Intrusion Detection (IDS)** - Detect and respond to attacks in real time.  
 
-_"Security is always excessive until it's not enough."_ – Robbie Sinclair, Head of Security at NSW Government  
+_"Security is always excessive until it's not enough."_ - Robbie Sinclair, Head of Security at NSW Government  
 
 #websecurity #securecoding #cybersecurity #devops #infosec

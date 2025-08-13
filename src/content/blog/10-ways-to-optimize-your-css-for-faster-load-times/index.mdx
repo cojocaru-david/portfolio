@@ -18,7 +18,7 @@ updatedDate: 2025-05-02
 
 # 10 Ways to Optimize Your CSS for Faster Load Times  
 
-Slow-loading CSS can drag down your website’s performance, hurting user experience and SEO rankings. The good news? Optimizing your CSS is easier than you think. Here are **10 actionable strategies** to reduce file size, speed up rendering, and boost your site’s load times.  
+Slow-loading CSS can drag down your website's performance, hurting user experience and SEO rankings. The good news? Optimizing your CSS is easier than you think. Here are **10 actionable strategies** to reduce file size, speed up rendering, and boost your site's load times.  
 
 ## 1. Minify Your CSS  
 
@@ -47,7 +47,7 @@ Compression shrinks file sizes further by encoding data more efficiently.
 Unused styles bloat your files. Tools like **PurgeCSS** or **UnCSS** scan your HTML and CSS to eliminate dead code.  
 
 - **Framework support:** Works with Tailwind CSS and others.  
-- **Audit manually:** Use Chrome DevTools’ **Coverage tab** to spot unused styles.  
+- **Audit manually:** Use Chrome DevTools' **Coverage tab** to spot unused styles.  
 
 ## 4. Replace `@import` with `<link>`  
 
@@ -68,7 +68,7 @@ Unused styles bloat your files. Tools like **PurgeCSS** or **UnCSS** scan your H
 Complex selectors slow rendering. Keep them lean.  
 
 - **Avoid deep nesting:** `.nav ul li a` is slower than `.nav-link`.  
-- **Use classes:** They’re faster than tag selectors.  
+- **Use classes:** They're faster than tag selectors.  
 
 ```css
 /* Slow */
@@ -96,7 +96,7 @@ Hint to the browser about upcoming changes for smoother animations.
 }
 ```
 
-**Tip:** Don’t overuse `will-change`—it’s for elements actively animating.  
+**Tip:** Don't overuse `will-change` it's for elements actively animating.  
 
 ## 8. Split CSS into Modular Files  
 
@@ -107,7 +107,7 @@ Loading one giant file delays rendering. Break it up:
 
 ## 9. Use Flexbox and Grid  
 
-Ditch floats for modern layouts. They’re cleaner and faster.  
+Ditch floats for modern layouts. They're cleaner and faster.  
 
 ```css
 .container {
@@ -124,6 +124,6 @@ Tell the browser to prioritize key styles with `<link rel="preload">`.
 <link rel="preload" href="critical.css" as="style">
 ```
 
-> _"Website performance is not just a technical issue; it’s a user experience imperative. Every millisecond counts!"_  
+> _"Website performance is not just a technical issue; it's a user experience imperative. Every millisecond counts!"_  
 
 #CSS #WebPerformance #FrontEnd #Optimization
