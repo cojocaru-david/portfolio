@@ -13,15 +13,14 @@ Disallow: /temp/
 # Crawl delay for better server performance
 Crawl-delay: 1
 
-# Sitemap location
+# Sitemap location (single canonical sitemap)
 Sitemap: ${sitemapURL.href}
-Sitemap: ${new URL('sitemap-index.xml', SITE.href).href}
 
 # Additional information
 # Host: ${SITE.href}
 `
 
 export const GET: APIRoute = ({ site }) => {
-  const sitemapURL = new URL('sitemap.xml', site)
+  const sitemapURL = new URL('sitemap-index.xml', site)
   return new Response(getRobotsTxt(sitemapURL))
 }

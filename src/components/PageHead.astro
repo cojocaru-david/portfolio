@@ -10,18 +10,20 @@ const { title = SITE.title, description = SITE.description } = Astro.props
 const image = new URL('/ogImage.png', Astro.site).toString()
 const posts = await getAllPosts()
 
-// Optimize description for SEO
-const optimizedDescription = description.length > 160 
-  ? description.substring(0, 157) + '...' 
-  : description
+// Optimize description for SEO (50-155 chars)
+const descTrimmed = description.trim()
+const optimizedDescription = descTrimmed.length > 155
+  ? descTrimmed.slice(0, 152) + '...'
+  : descTrimmed
 
-// Create proper page title
-const pageTitle = title === SITE.title ? SITE.title : `${title} | ${SITE.title}`
+// Create proper page title, clamp to ~60 chars
+const rawTitle = title === SITE.title ? SITE.title : `${title} | ${SITE.title}`
+const pageTitle = rawTitle.length > 60 ? rawTitle.slice(0, 57) + '...' : rawTitle
 ---
 
 <title>{pageTitle}</title>
 <meta name="description" content={optimizedDescription} />
-<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+<!-- robots set globally in base head to avoid duplicates -->
 <meta name="language" content={SITE.locale} />
 <link rel="canonical" href={Astro.url} />
 

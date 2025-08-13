@@ -3,34 +3,25 @@
 @custom-variant dark (&:is(.dark *));
 
 @font-face {
-  font-family: 'Geist';
-  src: url('/fonts/GeistVF.woff2') format('woff2-variations');
-  font-weight: 100 900;
+  font-family: 'ClashDisplay';
+  src: url('/fonts/ClashDisplay/ClashDisplay-Semibold.woff2') format('woff2'),
+      url('/fonts/ClashDisplay/ClashDisplay-Semibold.woff') format('woff');
+  font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Geist Mono';
-  src: url('/fonts/GeistMonoVF.woff2') format('woff2-variations');
-  font-weight: 100 900;
+  font-family: 'Lexend';
+  src: url('/fonts/Lexend/Lexend-Regular.woff2') format('woff2'),
+      url('/fonts/Lexend/Lexend-Regular.woff') format('woff');
+  font-weight: normal;
   font-style: normal;
   font-display: swap;
-}
-
-@font-face {
-  font-family: 'ClashDisplay-Semibold';
-  src:
-    url('/fonts/ClashDisplay-Semibold.woff2') format('woff2'),
-    url('/fonts/ClashDisplay-Semibold.woff') format('woff'),
-    url('/fonts/ClashDisplay-Semibold.ttf') format('truetype');
-  font-weight: 400;
-  font-display: swap;
-  font-style: normal;
 }
 
 .font-custom {
-  font-family: 'ClashDisplay-Semibold';
+  font-family: 'ClashDisplay', sans-serif;
 }
 
 :root {
@@ -68,9 +59,7 @@
 
   --radius: 0.5rem;
 
-  --font-sans:
-    Geist, ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
-    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --font-sans: "Lexend", sans-serif;
   --font-mono:
     Geist Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
     'Liberation Mono', 'Courier New', monospace;

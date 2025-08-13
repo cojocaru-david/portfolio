@@ -24,9 +24,11 @@ function Search({ searchList, initialPosts }) {
         ...item,
         data: {
           ...item.data,
-          title: item.data.title.toLowerCase(),
-          description: item.data.description.toLowerCase(),
-          tags: item.data.tags.map((tag) => tag.toLowerCase()),
+          title: String(item.data.title || '').toLowerCase(),
+          description: String(item.data.description || '').toLowerCase(),
+          tags: Array.isArray(item.data.tags)
+            ? item.data.tags.map((tag) => String(tag).toLowerCase())
+            : [],
         },
       })),
     [searchList],

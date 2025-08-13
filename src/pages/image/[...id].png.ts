@@ -7,10 +7,10 @@ import fs from 'fs'
 import path from 'path'
 
 const MontserratRegular = fs.readFileSync(
-  path.resolve('./public/fonts/_montserrat_regular.ttf'),
+  path.resolve('./public/fonts2/_montserrat_regular.ttf'),
 )
 const MontserratBold = fs.readFileSync(
-  path.resolve('./public/fonts/_montserrat_bold.ttf'),
+  path.resolve('./public/fonts2/_montserrat_bold.ttf'),
 )
 
 const dimensions = {
@@ -151,7 +151,7 @@ export async function GET(context: APIContext) {
 
   const pngData = image.asPng()
 
-  return new Response(pngData, {
+  return new Response(pngData as any, {
     headers: {
       'Content-Type': 'image/png',
       'Content-Disposition': 'inline; filename="social-card.png"',
