@@ -36,7 +36,7 @@ export const SOCIAL_LINKS: SocialLink[] = [
     label: 'Email',
   },
   {
-    href: '+40 764 132 266',
+    href: 'tel:+40764132266',
     label: 'Phone',
   },
   {
