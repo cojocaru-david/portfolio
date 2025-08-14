@@ -8,6 +8,7 @@ export const SITE: Site = {
   author: 'Cojocaru David',
   locale: 'en-US',
   location: 'Romania',
+  email: 'contact@cojocarudavid.me'
 }
 
 export const NAV_LINKS: SocialLink[] = [

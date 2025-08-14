@@ -107,7 +107,7 @@ const canonicalUrl = new URL(`/blog/${post.id}/`, Astro.site).toString();
 
     {headings.length > 0 && <TableOfContents headings={headings} />}
 
-    <article class="prose col-start-2 max-w-none">
+    <article class="prose col-start-2 max-w-none" aria-label="Blog post">
       <Content />
     </article>
 
@@ -137,7 +137,7 @@ const canonicalUrl = new URL(`/blog/${post.id}/`, Astro.site).toString();
           title="Share on Facebook"
           aria-label="Share on Facebook"
         >
-          <Button variant="outline" size="icon">
+          <Button variant="outline" size="icon" aria-label="Share on Facebook">
             <Icon name="line-md:facebook" class="size-4" />
           </Button>
         </Link>
@@ -148,7 +148,7 @@ const canonicalUrl = new URL(`/blog/${post.id}/`, Astro.site).toString();
           title="Share on Twitter"
           aria-label="Share on Twitter"
         >
-          <Button variant="outline" size="icon">
+          <Button variant="outline" size="icon" aria-label="Share on Twitter">
             <Icon name="line-md:twitter" class="size-4" />
           </Button>
         </Link>
@@ -159,7 +159,7 @@ const canonicalUrl = new URL(`/blog/${post.id}/`, Astro.site).toString();
           title="Share on LinkedIn"
           aria-label="Share on LinkedIn"
         >
-          <Button variant="outline" size="icon">
+          <Button variant="outline" size="icon" aria-label="Share on LinkedIn">
             <Icon name="line-md:linkedin" class="size-4" />
           </Button>
         </Link>
@@ -170,7 +170,7 @@ const canonicalUrl = new URL(`/blog/${post.id}/`, Astro.site).toString();
           title="Share on Reddit"
           aria-label="Share on Reddit"
         >
-          <Button variant="outline" size="icon">
+          <Button variant="outline" size="icon" aria-label="Share on Reddit">
             <Icon name="line-md:reddit-loop" class="size-4" />
           </Button>
         </Link>
@@ -181,7 +181,7 @@ const canonicalUrl = new URL(`/blog/${post.id}/`, Astro.site).toString();
           title="Share on WhatsApp"
           aria-label="Share on WhatsApp"
         >
-          <Button variant="outline" size="icon">
+          <Button variant="outline" size="icon" aria-label="Share on WhatsApp">
             <Icon name="mdi:whatsapp" class="size-4" />
           </Button>
         </Link>
@@ -192,7 +192,7 @@ const canonicalUrl = new URL(`/blog/${post.id}/`, Astro.site).toString();
           title="Share on Telegram"
           aria-label="Share on Telegram"
         >
-          <Button variant="outline" size="icon">
+          <Button variant="outline" size="icon" aria-label="Share on Telegram">
             <Icon name="line-md:telegram" class="size-4" />
           </Button>
         </Link>
@@ -203,7 +203,7 @@ const canonicalUrl = new URL(`/blog/${post.id}/`, Astro.site).toString();
           title="Share on Pinterest"
           aria-label="Share on Pinterest"
         >
-          <Button variant="outline" size="icon">
+          <Button variant="outline" size="icon" aria-label="Share on Pinterest">
             <Icon name="mdi:pinterest" class="size-4" />
           </Button>
         </Link>

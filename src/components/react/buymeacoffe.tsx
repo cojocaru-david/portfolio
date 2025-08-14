@@ -7,7 +7,7 @@ function BuyMeCoffee({ classname }: { classname?: string }) {
         href='https://ko-fi.com/cojoo'
         target='_blank'
         className={cn(
-          'border relative group w-36 mx-auto cursor-pointer h-32 grid place-content-center p-10 py-14 bg-primary  rounded-md  overflow-hidden',
+          'border relative group w-36 mx-auto cursor-pointer h-32 grid place-content-center p-10 py-14 bg-primary rounded-md overflow-hidden',
           classname
         )}
       >

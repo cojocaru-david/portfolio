@@ -2,7 +2,7 @@
 name: 'cojocarudavid.me (old)'
 description: 'Blazing fast personal website built with Astro.js and styled with Tailwind CSS.'
 tags: ['astro', 'tailwindcss', 'typescript']
-image: '../../../public/static/cojocarudavidme.png'
+image: '../../../public/static/cojocarudavidme.webp'
 link: 'https://github.com/cojocaru-david/cojocarudavid.me'
 startDate: '2023-10-16'
 endDate: '2025-04-28'

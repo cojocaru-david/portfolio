@@ -97,7 +97,7 @@ export default function ThemeToggle() {
     localStorage.setItem("theme", newTheme);
   };
 
-  return <button onClick={toggleTheme}>{theme === "light" ? "🌙" : "🌞"}</button>;
+  return <button onClick={toggleTheme} aria-label="Toggle theme">{theme === "light" ? "🌙" : "🌞"}</button>;
 }
 ```  
 

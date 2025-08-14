@@ -109,7 +109,7 @@ const Task = ({ task, onDelete, onToggle }) => {
         />
         <span>{task.text}</span>
       </div>
-      <button onClick={() => onDelete(task.id)} className="delete-btn">
+      <button onClick={() => onDelete(task.id)} className="delete-btn" aria-label="Delete task">
         Delete
       </button>
     </div>
@@ -187,7 +187,7 @@ const TaskForm = ({ onAdd }) => {
         placeholder="What needs to be done?"
         className="task-input"
       />
-      <button type="submit" className="add-btn">
+      <button type="submit" className="add-btn" aria-label="Add task">
         Add Task
       </button>
     </form>

@@ -2,7 +2,7 @@
 name: 'Modern Portfolio'
 description: 'Modern Portfolio is a personal website that showcases my work and projects. It is built with Astro.js and styled with Tailwind CSS, providing a fast and responsive user experience. The website features a clean design, easy navigation, and a focus on showcasing my skills and projects.'
 tags: ['astro', 'tailwindcss', 'typescript']
-image: '../../../public/static/modern-portfolio.png'
+image: '../../../public/static/modern-portfolio.webp'
 link: 'https://cojocarudavid.me'
 startDate: '2025-03-30'
 ---

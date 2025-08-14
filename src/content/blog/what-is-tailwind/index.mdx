@@ -51,7 +51,7 @@ Instead of writing CSS like:
 I just typed:
 
 ```html
-<button class="px-8 py-3 bg-blue-500 text-white rounded-lg font-semibold hover:bg-blue-600 transition">
+<button class="px-8 py-3 bg-blue-500 text-white rounded-lg font-semibold hover:bg-blue-600 transition" aria-label="Get started">
   Get Started
 </button>
 ```
@@ -420,7 +420,7 @@ Let's build something useful. A **responsive card** that looks great everywhere.
   <div class="p-6">
     <h3 class="text-xl font-semibold text-gray-900">Card Title</h3>
     <p class="mt-2 text-gray-600">Brief description here</p>
-    <button class="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+    <button class="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600" aria-label="Learn more">
       Learn More
     </button>
   </div>
@@ -432,7 +432,7 @@ Let's build something useful. A **responsive card** that looks great everywhere.
 ```html
 <!-- Changes to horizontal layout on desktop -->
 <div class="max-w-4xl mx-auto md:flex">
-  <img class="md:w-48 md:h-auto" src="/img.jpg">
+  <img class="md:w-48 md:h-auto" src="/img.jpg" alt="Card image">
   <div class="p-6">
     <!-- Same content, now horizontal -->
   </div>

@@ -123,8 +123,8 @@ Create `index.html` in the same folder. Paste and save.
 <body>
   <h1>💬 Mini Chat</h1>
   <div id="chat"></div>
-  <input id="msgBox" placeholder="Type and hit Enter">
-  <button onclick="sendMsg()">Send</button>
+  <input id="msgBox" placeholder="Type and hit Enter" aria-label="Message input">
+  <button onclick="sendMsg()" aria-label="Send message">Send</button>
 
   <script>
     const socket = new WebSocket('ws://localhost:8080');

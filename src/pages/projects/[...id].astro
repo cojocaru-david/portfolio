@@ -88,16 +88,16 @@ const currentUrl = Astro.url;
     <Image
       src={project.data.image}
       alt={project.data.name}
-      class="col-start-2 mb-8 h-auto w-full rounded-3xl object-cover"
+      class="col-start-2 mb-8 h-[500px] w-full rounded-3xl object-cover"
       loading="lazy"
       fetchpriority="low"      
-      width={1800}
-      height={1600}
+      width={1200}
+      height={800}
     />
 
     {headings.length > 0 && <TableOfContents headings={headings} />}
 
-    <article class="prose col-start-2 max-w-none">
+    <article class="prose col-start-2 max-w-none" aria-label="Project">
       <Content />
     </article>
 
@@ -116,7 +116,7 @@ const currentUrl = Astro.url;
         <h3 class="text-base font-semibold">Project Links</h3>
         <ul class="list-disc pl-4">
           <li>
-            <a href={project.data.link} target="_blank" rel="noopener noreferrer">
+            <a href={project.data.link} target="_blank" rel="noopener noreferrer" aria-label="Project link">
               {project.data.link}
             </a>
           </li>

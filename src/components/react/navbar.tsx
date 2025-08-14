@@ -84,7 +84,7 @@ const Navbar = () => {
     <>
       <motion.header
         aria-label="Navigation"
-        role="navigation"
+        role="banner"
         layout={!isMobile}
         initial={sizeVariants[0]}
         animate={isMobile ? sizeVariants[0] : sizeVariants[scrollLevel]}
@@ -113,7 +113,6 @@ const Navbar = () => {
             className="font-custom flex shrink-0 items-center gap-2 text-xl font-bold"
             aria-label="Home"
             title="Home"
-            navigation="true"
           >
             <Logo className="h-8 w-8" />
             <span className={
@@ -123,7 +122,7 @@ const Navbar = () => {
           </Link>
 
           <div className="flex items-center gap-2 md:gap-4">
-            <nav className="hidden items-center gap-6 md:flex" aria-label="Main navigation" role="navigation">
+            <nav className="hidden items-center gap-6 md:flex" aria-label="Main navigation">
               {NAV_LINKS.map((item) => {
                 const isActive = activePath.startsWith(item.href) && item.href !== "/";
                 return (

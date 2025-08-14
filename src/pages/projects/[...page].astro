@@ -58,7 +58,7 @@ const currentUrl = Astro.url;
         <div
           class="group h-full w-full transition-all duration-300 hover:translate-y-[-4px] even:sm:mt-14"
         >
-          <a class="flex flex-col h-full w-full rounded-2xl overflow-hidden bg-card hover:shadow-lg transition-all duration-300 border border-card-foreground/10" href={`/projects/${project.id}`}>
+          <a class="flex flex-col h-full w-full rounded-2xl overflow-hidden bg-card hover:shadow-lg transition-all duration-300 border border-card-foreground/10" href={`/projects/${project.id}`} aria-label="Project link">
             <div
               class="aspect-[16/10] w-full overflow-hidden"
             >

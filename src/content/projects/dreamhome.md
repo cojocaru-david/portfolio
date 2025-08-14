@@ -2,7 +2,7 @@
 name: 'Dream Home Template'
 description: 'A modern, responsive real estate platform built with React, Vite, and Tailwind CSS. Find your dream home with intuitive search, detailed property listings, and seamless user experience.'
 tags: ['react', 'vite', 'tailwindcss']
-image: '../../../public/static/dream-home-template.png'
+image: '../../../public/static/dream-home-template.webp'
 link: 'https://dreamhome.cojocarudavid.me'
 startDate: '2025-04-16'
 endDate: '2025-05-29'
