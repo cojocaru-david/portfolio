@@ -35,7 +35,7 @@
     "@astrojs/markdown-remark": "^6.3.5",
     "@astrojs/mdx": "^4.3.3",
     "@astrojs/react": "^4.3.0",
-    "@astrojs/rss": "^4.0.12",
+    "@astrojs/rss": "^4.0.19",
     "@astrojs/vercel": "^8.2.5",
     "@expressive-code/plugin-collapsible-sections": "^0.41.3",
     "@expressive-code/plugin-line-numbers": "^0.41.3",
