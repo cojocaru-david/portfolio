@@ -36,7 +36,7 @@
     "@astrojs/mdx": "^4.3.3",
     "@astrojs/react": "^4.3.0",
     "@astrojs/rss": "^4.0.12",
-    "@astrojs/vercel": "^8.2.5",
+    "@astrojs/vercel": "^11.0.4",
     "@expressive-code/plugin-collapsible-sections": "^0.41.3",
     "@expressive-code/plugin-line-numbers": "^0.41.3",
     "@fingerprintjs/fingerprintjs": "^4.6.2",
